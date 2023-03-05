@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://776tqld8m531"]
+
+[ext_resource type="Script" path="res://Scripts/Clouds.gd" id="1_k1qck"]
+[ext_resource type="Texture2D" uid="uid://c4i5ygrop0u6w" path="res://Assets/background/violet.png" id="2_1yfxy"]
+
+[node name="World" type="Node2D"]
+
+[node name="Clouds" type="Node2D" parent="."]
+script = ExtResource("1_k1qck")
+
+[node name="Board" type="TileMap" parent="."]
+format = 2
+
+[node name="Violet" type="Sprite2D" parent="."]
+position = Vector2(562, 324)
+scale = Vector2(0.632813, 0.632813)
+texture = ExtResource("2_1yfxy")

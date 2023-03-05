@@ -1,0 +1,3 @@
+backgrounds: https://opengameart.org/content/spacy-cloudnebula-backgrounds
+
+clouds: https://opengameart.org/content/background-clouds-and-mountains-parallax
