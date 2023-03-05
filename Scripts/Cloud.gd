@@ -16,15 +16,15 @@ func _ready():
 	# randomize everything to 
 	var rng = RandomNumberGenerator.new()
 	rng.randomize()
-	SPEED = rng.randf_range(0.2, 1)
+	SPEED = rng.randf_range(0.1, 0.2)
 	SIN_AMPL = rng.randf_range(1, 100)
-	SIN_FREQ = rng.randf_range(0.001, 0.01)
+	SIN_FREQ = rng.randf_range(0.001, 0.005)
 	SIN_OFFSET = rng.randf_range(0, 800)
-	self.position.x = -100
-	var iscale:float = rng.randf_range(0.1, 1)
+	self.position.x = rng.randi_range(-400, 150)
+	var iscale:float = rng.randf_range(0.8, 1.4)
 	self.scale = Vector2(iscale, iscale)
 	
-	randomize_sprite(rng.randi_range(1, 3))
+	randomize_sprite(rng.randi_range(1, 4))
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -36,5 +36,5 @@ func _process(_delta):
 	if(position.x > 3000):
 		self.queue_free()
 
-func randomize_sprite(cloudno:int):
-	$Sprite2D.texture = load("res://Assets/clouds/cloud" + str(cloudno) + ".png")
+func randomize_sprite(cloud_index:int):
+	$Sprite2D.texture = load("res://Assets/clouds/Cloud0" + str(cloud_index) + ".png")

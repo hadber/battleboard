@@ -5,13 +5,15 @@
 
 [node name="World" type="Node2D"]
 
+[node name="Background" type="Sprite2D" parent="."]
+position = Vector2(648, 324)
+scale = Vector2(0.632813, 0.632813)
+texture = ExtResource("2_1yfxy")
+metadata/_edit_lock_ = true
+
 [node name="Clouds" type="Node2D" parent="."]
+y_sort_enabled = true
 script = ExtResource("1_k1qck")
 
 [node name="Board" type="TileMap" parent="."]
 format = 2
-
-[node name="Violet" type="Sprite2D" parent="."]
-position = Vector2(562, 324)
-scale = Vector2(0.632813, 0.632813)
-texture = ExtResource("2_1yfxy")
